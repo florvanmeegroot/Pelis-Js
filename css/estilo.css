@@ -51,7 +51,7 @@ nav i:hover {
   background-image: url(../img/grupo-de-gente-en-el-cine.jpg);
   background-size: cover;
   background-color: black;
-  height: 65vh;
+  height: 70vh;
   padding: 30px 80px;
   display: flex;
   align-items: center;
@@ -87,6 +87,47 @@ button.btn-home {
   border: 0px;
   background: transparent;
   margin-top: 20px;
+}
+
+.section-pelis {
+  max-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 50px;
+}
+
+.section-pelis h3 {
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.categorias {
+  text-align: center;
+}
+
+/* FOOTER */
+.logo-footer {
+  max-width: 3%;
+  justify-content: center;
+}
+
+.footer-pelis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-height: 200px;
+  background: #747474;
+  padding: 30px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
