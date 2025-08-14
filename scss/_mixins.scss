@@ -1,0 +1,14 @@
+@mixin btn-estilo {
+  background-color: $bg-btn;
+  color: $color-principal;
+  padding: $padding-btn;
+  border: $border-btn;
+  font-size: 15px;
+  margin: 5px;
+  border-radius: $border-radius;
+  font-weight: 600;
+  font-family: $fuente-textos;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.8s ease;
+}

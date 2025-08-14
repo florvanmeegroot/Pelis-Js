@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+
+/* Ajustes generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-color {
+  background-color: $color-body;
+}
+
+/* HEADER & NAV*/
+.encabezado {
+  background: $background-principal;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo-header {
+  max-width: 10%;
+}
+
+#saludo {
+  font-family: $fuente-textos;
+  color: $color-body;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav {
+  a {
+    color: $color-body;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+}
+
+nav {
+  i {
+    padding: 10px;
+    &:hover {
+      color: #ff9800;
+    }
+  }
+}
+
+/* HOME */
+.hero-home {
+    display: flex;
+  background-image: url(../img/grupo-de-gente-en-el-cine.jpg);
+  background-size: cover;
+  background-color: black;
+  height: 65vh;
+  padding: 30px 80px;
+  display: flex;
+  align-items: center;
+}
+
+
+.titulo-h1 {
+    font-family: $fuente-titulos;
+    color: white;
+    font-size: 55px;
+    line-height: 60px;
+}
+
+/* BOTONES */
+.btn-home {
+  a {
+    @include btn-estilo;
+  }
+    &:hover {
+    transform: scale(1.05);
+  }
+}
+
+button.btn-home {
+  border: 0px;
+  background: transparent;
+  margin-top: 20px;
+}
+

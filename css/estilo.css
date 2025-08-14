@@ -1,0 +1,92 @@
+/* Ajustes generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-color {
+  background-color: #131313;
+}
+
+/* HEADER & NAV*/
+.encabezado {
+  background: #747474;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logo-header {
+  max-width: 10%;
+}
+
+#saludo {
+  font-family: "Open Sans", sans-serif;
+  color: #131313;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #131313;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+nav i {
+  padding: 10px;
+}
+nav i:hover {
+  color: #ff9800;
+}
+
+/* HOME */
+.hero-home {
+  display: flex;
+  background-image: url(../img/grupo-de-gente-en-el-cine.jpg);
+  background-size: cover;
+  background-color: black;
+  height: 65vh;
+  padding: 30px 80px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+/* BOTONES */
+.btn-home a {
+  background-color: transparent;
+  color: #FF4E4E;
+  padding: 10px 15px;
+  border: solid 1px #FF4E4E;
+  font-size: 15px;
+  margin: 5px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.8s ease;
+}
+.btn-home:hover {
+  transform: scale(1.05);
+}
+
+button.btn-home {
+  border: 0px;
+  background: transparent;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
