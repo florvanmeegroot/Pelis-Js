@@ -103,7 +103,7 @@ button.btn-home {
 }
 
 .categorias {
-   text-align: center;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -128,62 +128,68 @@ p {
   font-size: 12px;
 }
 
+.contenido-mm {
+  font-family: $fuente-textos;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  background-color: $color-principal;
+}
+
 
 /* MEDIAS QUERYS */
-
 @media (max-width: 768px) {
-/* HEADER & NAV*/
-
-.encabezado {
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  gap: 10px;
-}
-
-#saludo {
-  font-size: 18px;
-}
-
-.logo-header {
-  max-width: 25%;
-}
-
-nav {
-  a {
-    margin-left: 5px;
+  /* HEADER & NAV*/
+  .encabezado {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
   }
-}
 
-nav {
-  i {
-    padding: 10px;
+  #saludo {
+    font-size: 18px;
   }
-}
 
-.titulo-h1 {
-  font-size: 25px;
-  line-height: 30px;
-}
+  .logo-header {
+    max-width: 25%;
+  }
 
-.hero-home {
-  padding: 30px;
-}
+  nav {
+    a {
+      margin-left: 5px;
+    }
+  }
 
-.btn-home a {
-  font-size: 12px;
-}
+  nav {
+    i {
+      padding: 10px;
+    }
+  }
 
-.section-pelis h3 {
-  font-size: 18px;
-}
+  .titulo-h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
 
-/* FOOTER */
-.logo-footer {
+  .hero-home {
+    padding: 30px;
+  }
+
+  .btn-home a {
+    font-size: 12px;
+  }
+
+  .section-pelis h3 {
+    font-size: 18px;
+  }
+
+  /* FOOTER */
+  .logo-footer {
     max-width: 15%;
-}
-
-
+  }
 }

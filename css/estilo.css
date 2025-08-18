@@ -130,6 +130,16 @@ p {
   font-size: 12px;
 }
 
+.contenido-mm {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  background-color: #FF4E4E;
+}
+
 /* MEDIAS QUERYS */
 @media (max-width: 768px) {
   /* HEADER & NAV*/
