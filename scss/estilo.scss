@@ -52,6 +52,16 @@ nav {
   }
 }
 
+.titulo-a { 
+  display: flex;
+  align-items: center;
+  font-family: $fuente-titulos;
+  color: $color-body;
+  font-size: 35px;
+  text-decoration: none;
+  justify-content: start;
+}
+
 /* HOME */
 .hero-home {
   display: flex;
@@ -170,6 +180,11 @@ p {
       padding: 10px;
     }
   }
+
+  .titulo-a { 
+  font-size: 25px;
+  justify-content: center;
+}
 
   .titulo-h1 {
     font-size: 25px;

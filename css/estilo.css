@@ -45,6 +45,16 @@ nav i:hover {
   color: #ff9800;
 }
 
+.titulo-a {
+  display: flex;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #131313;
+  font-size: 35px;
+  text-decoration: none;
+  justify-content: start;
+}
+
 /* HOME */
 .hero-home {
   display: flex;
@@ -162,6 +172,10 @@ p {
   }
   nav i {
     padding: 10px;
+  }
+  .titulo-a {
+    font-size: 25px;
+    justify-content: center;
   }
   .titulo-h1 {
     font-size: 25px;
