@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../css/estilo.css" />
 
     <!-- JS -->
-    <script defer src="../js/main.js"></script>
+    <script defer src="././js/login.js"></script>
+    <script defer src="././js/pelis.js"></script>
+    <script defer src="././js/filtros.js"></script>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,7 +52,20 @@
         </a>
       </nav>
     </header>
-    <main></main>
+    <div class="botones-filtro">
+      <button onclick="mostrarPeliculas('Todos')">Todos</button>
+      <button onclick="mostrarPeliculas('Ciencia ficcion')">
+        Ciencia Ficción
+      </button>
+      <button onclick="mostrarPeliculas('Comedia')">Comedia</button>
+      <button onclick="mostrarPeliculas('Romance')">Romance</button>
+      <button onclick="mostrarPeliculas('Accion')">Acción</button>
+      <button onclick="mostrarPeliculas('Animacion')">Animación</button>
+      <button onclick="mostrarPeliculas('Superheroes')">Superhéroes</button>
+      <button onclick="mostrarPeliculas('Terror')">Terror</button>
+    </div>
+
+    <div id="listaPeliculas" class="peliculas"></div>
     <footer class="footer-pelis">
       <a href="../index.html"
         ><img
