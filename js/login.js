@@ -27,16 +27,27 @@ loginForm.addEventListener("submit", (e) => {
   const usuario = document.getElementById("usuario").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  // Validación simple
-  if (usuario !== "user" || password !== "pass") {
-    alert("Usuario o contraseña incorrectos");
-    return;
-  }
+  // Validación simple incorporando sweet alert
+if (usuario !== "user" || password !== "pass") {
+  Swal.fire({
+    icon: 'error',
+    title: 'Error',
+    text: 'Usuario o contraseña incorrectos',
+    confirmButtonColor: '#3085d6'
+  });
+  return;
+}
 
-  if (!nombre || isNaN(edad) || edad <= 0) {
-    alert("Por favor completa todos los campos correctamente");
-    return;
-  }
+if (!nombre || isNaN(edad) || edad <= 0) {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Campos incompletos',
+    text: 'Por favor completa todos los campos correctamente',
+    confirmButtonColor: '#3085d6'
+  });
+  return;
+}
+
 
   // Guardar en localStorage
   localStorage.setItem("nombre", nombre);

@@ -80,9 +80,10 @@ nav {
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
-  width: 300px;
+  width: 350px !important;
   text-align: center;
 }
+
 h2 {
   margin-bottom: 0.5rem;
   font-family: $fuente-titulos;
@@ -147,20 +148,36 @@ h2 {
   }
 }
 
+.alert-fav {
+  background-color: transparent;
+    color: #545454 !important;
+    padding: 5px 12px;
+    border: solid 1px #545454;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.8s ease;
+}
+
 button.btn-home {
   border: 0px;
   background: transparent;
   margin-top: 20px;
 }
 
-button#cargarMas  {
-    background-color: transparent;
-    color: $color-principal;
-    font-size: 15px;
-    font-family: "Open Sans", sans-serif;
-    padding: 10px 30px;
-    border: solid 1px $color-principal;
-    border-radius: 24px;
+button#cargarMas {
+  background-color: transparent;
+  color: $color-principal;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 30px;
+  border: solid 1px $color-principal;
+  border-radius: 24px;
 }
 
 /*RENDERIZADO CARDS*/
@@ -171,13 +188,15 @@ button#cargarMas  {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
+
 .tittle-listado {
   font-family: $fuente-titulos;
   color: white;
   font-size: 25px;
+  margin-bottom: 0px;
 }
-
 
 #peliculas {
   display: grid;
@@ -249,6 +268,16 @@ button#cargarMas  {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */
+.custom-img {
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: white !important;
 }
 
 /* FOOTER */

@@ -73,7 +73,7 @@ nav i:hover {
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
-  width: 300px;
+  width: 350px !important;
   text-align: center;
 }
 
@@ -159,6 +159,22 @@ h2 {
   transform: scale(1.05);
 }
 
+.alert-fav {
+  background-color: transparent;
+  color: #545454 !important;
+  padding: 5px 12px;
+  border: solid 1px #545454;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.8s ease;
+}
+
 button.btn-home {
   border: 0px;
   background: transparent;
@@ -182,12 +198,14 @@ button#cargarMas {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .tittle-listado {
   font-family: "Bebas Neue", sans-serif;
   color: white;
   font-size: 25px;
+  margin-bottom: 0px;
 }
 
 #peliculas {
@@ -259,6 +277,16 @@ button#cargarMas {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */
+.custom-img {
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: white !important;
 }
 
 /* FOOTER */
