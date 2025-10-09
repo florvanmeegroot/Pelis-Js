@@ -1,23 +1,19 @@
-// Elementos
 const loginModal = document.getElementById("loginModal");
 const loginForm = document.getElementById("loginForm");
 const saludo = document.getElementById("saludo");
-const contenidoAdulto = document.getElementById("contenido-mayores");
-const contenidoNinios = document.getElementById("contenido-menores");
 
-// Credenciales fijas
-const USERNAME = "user";
-const PASSWORD = "pass";
-
-// Verificar si ya hay datos guardados
+// Mostrar modal o saludo al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
-  const usuarioGuardado = localStorage.getItem("usuario");
   const nombreGuardado = localStorage.getItem("nombre");
   const edadGuardada = localStorage.getItem("edad");
+  const logueado = localStorage.getItem("logueado");
 
-  if (usuarioGuardado === USERNAME && nombreGuardado && edadGuardada) {
-    mostrarContenido(nombreGuardado, parseInt(edadGuardada));
+  if (logueado === "true" && nombreGuardado && edadGuardada) {
+    // Usuario ya inició sesión previamente
+    loginModal.style.display = "none";
+    mostrarSaludo(nombreGuardado);
   } else {
+    // Mostrar modal de login
     loginModal.style.display = "flex";
   }
 });
@@ -27,17 +23,16 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const nombre = document.getElementById("nombre").value.trim();
+  const edad = parseInt(document.getElementById("edad").value.trim());
   const usuario = document.getElementById("usuario").value.trim();
   const password = document.getElementById("password").value.trim();
-  const edad = parseInt(document.getElementById("edad").value.trim());
 
-  // Validación de usuario/contraseña
-  if (usuario !== USERNAME || password !== PASSWORD) {
+  // Validación simple
+  if (usuario !== "user" || password !== "pass") {
     alert("Usuario o contraseña incorrectos");
     return;
   }
 
-  // Validación de edad y nombre
   if (!nombre || isNaN(edad) || edad <= 0) {
     alert("Por favor completa todos los campos correctamente");
     return;
@@ -45,25 +40,16 @@ loginForm.addEventListener("submit", (e) => {
 
   // Guardar en localStorage
   localStorage.setItem("nombre", nombre);
-  localStorage.setItem("usuario", usuario);
   localStorage.setItem("edad", edad);
+  localStorage.setItem("logueado", "true");
 
-  mostrarContenido(nombre, edad);
+  // Cerrar modal y mostrar saludo
+  loginModal.style.display = "none";
+  mostrarSaludo(nombre);
 });
 
-// Función para mostrar contenido según edad
-function mostrarContenido(nombre, edad) {
-  loginModal.style.display = "none";
-
-  // Mostrar saludo general
+// Función para mostrar saludo
+function mostrarSaludo(nombre) {
   saludo.style.display = "block";
-  saludo.textContent = `Hola, ${nombre}`;
-
-  if (edad >= 18) {
-    contenidoAdulto.style.display = "block";
-    contenidoNinios.style.display = "none";
-  } else {
-    contenidoNinios.style.display = "block";
-    contenidoAdulto.style.display = "none";
-  }
+  saludo.textContent = `¡Hola, ${nombre}!`;
 }

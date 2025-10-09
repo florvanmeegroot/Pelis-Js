@@ -10,8 +10,7 @@
 
     <!-- JS -->
     <script defer src="././js/login.js"></script>
-    <script defer src="././js/pelis.js"></script>
-    <script defer src="././js/filtros.js"></script>
+    <script defer src="././js/pelis-x-api.js"></script>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -83,38 +82,22 @@
     <main class="hero-home" id="contenido">
       <div>
         <h1 class="titulo-h1">
-          Tus series favoritas,<br />
+          Tus pelis favoritas,<br />
           en un solo lugar
         </h1>
         <button class="btn-home">
-          <a href="././pages/favoritos.html">Ver series</a>
+          <a href="#peliculas">Elegí tus favoritas</a>
         </button>
       </div>
     </main>
-    <div id="contenido-mayores">
-      <h4 class="contenido-mm">Pelis para adultos</h4>
-      <div id="cards-container"></div>
-    </div>
+    <div>
+      <div class="listado-pelis">
+        <p class="tittle-listado">Películas Populares</p>
+      </div>
+      <div id="peliculas"></div>
 
-    <div id="contenido-menores">
-      <h4 class="contenido-mm">Pelis para niños</h4>
-      <div id="cards-animacion"></div>
+      <div class="mas"><button id="cargarMas">Cargar más</button></div>
     </div>
-
-    <div class="botones-filtro">
-      <button onclick="mostrarPeliculas('Todos')">Todos</button>
-      <button onclick="mostrarPeliculas('Ciencia ficcion')">
-        Ciencia Ficción
-      </button>
-      <button onclick="mostrarPeliculas('Comedia')">Comedia</button>
-      <button onclick="mostrarPeliculas('Romance')">Romance</button>
-      <button onclick="mostrarPeliculas('Accion')">Acción</button>
-      <button onclick="mostrarPeliculas('Animacion')">Animación</button>
-      <button onclick="mostrarPeliculas('Superheroes')">Superhéroes</button>
-      <button onclick="mostrarPeliculas('Terror')">Terror</button>
-    </div>
-
-    <div id="listaPeliculas" class="peliculas"></div>
 
     <footer class="footer-pelis">
       <a href="./index.html"

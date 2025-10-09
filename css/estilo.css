@@ -165,123 +165,100 @@ button.btn-home {
   margin-top: 20px;
 }
 
-/* CARDS RENDERIZADAS */
-#cards-container,
-#cards-animacion {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-#cards-container .card,
-#cards-animacion .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-#cards-container .card:hover,
-#cards-animacion .card:hover {
-  transform: translateY(-5px);
-}
-#cards-container .card img,
-#cards-animacion .card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-#cards-container .card h3,
-#cards-animacion .card h3 {
+button#cargarMas {
+  background-color: transparent;
+  color: #FF4E4E;
+  font-size: 15px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  margin: 10px 0;
-  color: #131313;
-}
-#cards-container .card p,
-#cards-animacion .card p {
-  margin: 5px 0;
-  font-size: 0.95rem;
+  padding: 10px 30px;
+  border: solid 1px #FF4E4E;
+  border-radius: 24px;
 }
 
-.btn-sel {
-  background: #FF4E4E;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s ease;
-}
-.btn-sel:hover {
-  background: #f4c66e;
-}
-
-.btn-fav {
-  background-color: #ff9800;
-}
-
-/* FILTRO DE PELICULAS BOTONES */
-.botones-filtro {
-  min-height: 100px;
+/*RENDERIZADO CARDS*/
+.listado-pelis {
+  height: 100px;
   background-color: #FF4E4E;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-.botones-filtro button {
-  background-color: #131313;
-  border: none;
-  padding: 10px 15px;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
 }
 
-#listaPeliculas {
+.tittle-listado {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+#peliculas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: white;
+  background-color: black;
 }
 
-.peliculas {
+.pelicula {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  background-color: #fff;
+  border: solid 1px #747474;
+  border-radius: 12px;
+}
+.pelicula img {
+  width: 355px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px 12px 0px 0px;
+}
+.pelicula .info-pelis {
+  display: flex;
+  flex-direction: column;
+}
+.pelicula h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #131313;
+  padding: 10px;
+  font-size: 18px;
+}
+.pelicula p {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  color: #131313;
+  font-size: 13px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.card-filtro {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  height: 400px;
-}
-.card-filtro img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-}
-.card-filtro h4 {
-  margin: 10px 0 5px;
-  font-size: 16px;
+.favorito-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #FF4E4E;
+  margin: 10px 20px;
+  color: white;
   font-family: "Open Sans", sans-serif;
-  color: black;
+  font-size: 15px;
 }
-.card-filtro p {
-  margin: 0 0 10px;
-  color: gray;
-  font-size: 14px;
+
+.favorito-btn.activo {
+  background-color: #f4c66e;
+  color: #131313;
+}
+
+.mas {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* FOOTER */

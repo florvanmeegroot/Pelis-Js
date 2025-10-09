@@ -153,128 +153,102 @@ button.btn-home {
   margin-top: 20px;
 }
 
-/* CARDS RENDERIZADAS */
-#cards-container,
-#cards-animacion {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-
-  .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: translateY(-5px);
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      font-family: $fuente-textos;
-      font-weight: 700;
-      font-size: 18px;
-      margin: 10px 0;
-      color: $color-body;
-    }
-
-    p {
-      margin: 5px 0;
-      font-size: 0.95rem;
-    }
-  }
+button#cargarMas  {
+    background-color: transparent;
+    color: $color-principal;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    padding: 10px 30px;
+    border: solid 1px $color-principal;
+    border-radius: 24px;
 }
 
-.btn-sel {
-  background: $color-principal;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-family: $fuente-textos;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s ease;
+/*RENDERIZADO CARDS*/
 
-  &:hover {
-    background: #f4c66e;
-  }
-}
-
-.btn-fav {
-  background-color: #ff9800;
-}
-
-/* FILTRO DE PELICULAS BOTONES */
-
-.botones-filtro {
-  min-height: 100px;
+.listado-pelis {
+  height: 100px;
   background-color: $color-principal;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  button {
-    background-color: $color-body;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    font-family: $fuente-textos;
-    font-size: 18px;
-    font-weight: 400;
-  }
-  }
+}
+.tittle-listado {
+  font-family: $fuente-titulos;
+  color: white;
+  font-size: 25px;
+}
 
 
-#listaPeliculas {
+#peliculas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: white;
+  background-color: black;
 }
 
-.peliculas {
+.pelicula {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-}
-
-.card-filtro {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  height: 400px;
-
+  background-color: #fff;
+  border: solid 1px $background-principal;
+  border-radius: 12px;
   img {
-    width: 100%;
-    height: 320px;
+    width: 355px;
+    height: 450px;
     object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
   }
 
-  h4 {
-  margin: 10px 0 5px;
-  font-size: 16px;
+  .info-pelis {
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    font-family: $fuente-textos;
+    color: $color-body;
+    padding: 10px;
+    font-size: 18px;
+  }
+  p {
+    font-family: $fuente-textos;
+    padding: 10px;
+    color: $color-body;
+    font-size: 13px;
+    padding-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.favorito-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: $color-principal;
+  margin: 10px 20px;
+  color: white;
   font-family: $fuente-textos;
-  color: black;
+  font-size: 15px;
 }
- p {
-  margin: 0 0 10px;
-  color: gray;
-  font-size: 14px;
+
+.favorito-btn.activo {
+  background-color: #f4c66e;
+  color: $color-body;
 }
+
+.mas {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* FOOTER */
