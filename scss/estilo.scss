@@ -150,18 +150,18 @@ h2 {
 
 .alert-fav {
   background-color: transparent;
-    color: #545454 !important;
-    padding: 5px 12px;
-    border: solid 1px #545454;
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    border-radius: 24px;
-    font-weight: 600;
-    font-family: "Open Sans", sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.8s ease;
+  color: #545454 !important;
+  padding: 5px 12px;
+  border: solid 1px #545454;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.8s ease;
 }
 
 button.btn-home {
@@ -198,7 +198,7 @@ button#cargarMas {
   margin-bottom: 0px;
 }
 
-#peliculas {
+#peliculas, #pokepelis {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
@@ -268,6 +268,10 @@ button#cargarMas {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pika-icon {
+  max-width: 4%;
 }
 
 /* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */

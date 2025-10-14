@@ -27,7 +27,7 @@ loginForm.addEventListener("submit", (e) => {
   const usuario = document.getElementById("usuario").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  // Validación simple incorporando sweet alert
+  // Validación incorporando sweet alert
 if (usuario !== "user" || password !== "pass") {
   Swal.fire({
     icon: 'error',

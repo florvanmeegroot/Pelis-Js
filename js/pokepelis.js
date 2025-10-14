@@ -1,36 +1,37 @@
+// --- CONFIGURACIÓN GENERAL ---
 const apiKey = "42d06fd861ef47c5c1c2e2da632aca6e";
-const contenedor = document.getElementById("peliculas");
-const btnCargarMas = document.getElementById("cargarMas");
 let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-let paginaActual = 1;
 
-//conexion con api con el parametro de peliculas populares
-function obtenerPeliculas(pagina) {
-  fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-ES&page=${pagina}`
-  )
+// --- FUNCIÓN PARA OBTENER PELÍCULAS DE POKÉMON ---
+function obtenerPeliculasPokemon() {
+  const URL = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=pokemon&language=es-ES`;
+
+  fetch(URL)
     .then((res) => res.json())
-    .then((data) => mostrarPeliculas(data.results))
-    .catch((err) => console.error("Hay un error: ", err));
+    .then((data) => {
+      mostrarPeliculasPokemon(data.results);
+    })
+    .catch((error) =>
+      console.error("Error al obtener películas Pokémon: ", error)
+    );
 }
 
-//funcion para renderizar cards de peliculas
-function mostrarPeliculas(peliculas) {
+// --- FUNCIÓN PARA MOSTRAR LAS PELÍCULAS DE POKÉMON ---
+function mostrarPeliculasPokemon(peliculas) {
+  const contenedor = document.getElementById("pokepelis");
+  contenedor.innerHTML = "";
+
   peliculas.forEach((pelicula) => {
     const esFavorito = favoritos.some((fav) => fav.id === pelicula.id);
 
     const div = document.createElement("div");
     div.classList.add("pelicula");
     div.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt="${
-      pelicula.title
-    }">
+      <img src="https://image.tmdb.org/t/p/w500${pelicula.poster_path}" alt="${pelicula.title}">
       <div class="info-pelis">
         <h3>${pelicula.title}</h3>
-        <p>${pelicula.overview}</p>
-        <button class="favorito-btn ${esFavorito ? "activo" : ""}" data-id="${
-      pelicula.id
-    }">
+        <p>${pelicula.overview || "Sin descripción disponible."}</p>
+        <button class="favorito-btn ${esFavorito ? "activo" : ""}" data-id="${pelicula.id}">
           ${esFavorito ? "❤ Añadido a favorito" : "Añadir a favorito"}
         </button>
       </div>
@@ -38,12 +39,13 @@ function mostrarPeliculas(peliculas) {
     contenedor.appendChild(div);
   });
 
+  // asignar eventos a los botones
   document.querySelectorAll(".favorito-btn").forEach((btn) => {
     btn.addEventListener("click", toggleFavorito);
   });
 }
 
-// función para favoritos
+// --- FUNCIÓN PARA AGREGAR / QUITAR FAVORITOS ---
 function toggleFavorito(e) {
   const id = parseInt(e.target.dataset.id);
   const peliculaCard = e.target.closest(".pelicula");
@@ -58,10 +60,10 @@ function toggleFavorito(e) {
     overview: peliculaCard.querySelector("p").textContent,
   };
 
-  // alternar agregar fav o quitar fav - utilizando sweet alert para notificar
   const index = favoritos.findIndex((fav) => fav.id === id);
 
   if (index !== -1) {
+    // Quitar de favoritos
     favoritos.splice(index, 1);
     boton.classList.remove("activo");
     boton.textContent = "Añadir a favorito";
@@ -76,6 +78,7 @@ function toggleFavorito(e) {
       timerProgressBar: true,
     });
   } else {
+    // Agregar a favoritos
     favoritos.push(pelicula);
     boton.classList.add("activo");
     boton.textContent = "❤ Añadido a favorito";
@@ -93,14 +96,10 @@ function toggleFavorito(e) {
     });
   }
 
+  // Guardar en localStorage
   localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
 
-// Cargar la primera pagina de pelis
-obtenerPeliculas(paginaActual);
+// --- LLAMADA INICIAL ---
+obtenerPeliculasPokemon();
 
-// Btn Cargar mas pelis
-btnCargarMas.addEventListener("click", () => {
-  paginaActual++;
-  obtenerPeliculas(paginaActual);
-});

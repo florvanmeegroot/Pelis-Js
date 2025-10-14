@@ -208,7 +208,7 @@ button#cargarMas {
   margin-bottom: 0px;
 }
 
-#peliculas {
+#peliculas, #pokepelis {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
@@ -277,6 +277,10 @@ button#cargarMas {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pika-icon {
+  max-width: 4%;
 }
 
 /* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */
