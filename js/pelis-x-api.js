@@ -85,7 +85,7 @@ function toggleFavorito(e) {
       position: "center",
       icon: "success",
       title: "Añadido a favoritos",
-      html: `<a href="favoritos.html" class="alert-fav">Ver favoritos</a>`,
+      html: `<a href="pages/favoritos.html" class="alert-fav">Ver favoritos</a>`,
       background: "white",
       showConfirmButton: false,
       timer: 3000,
