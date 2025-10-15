@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelis Online | Mis Favoritos</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css"/>
+
+    <!-- CSS BOOTSTRAP-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- JS -->
+    <script defer src="../js/favoritos.js"></script>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="body-color">
+    <header class="encabezado">
+      <a class="titulo-a" href="../index.html"
+        ><img
+          src="../img/Logo-Pelis.png"
+          alt="Logo Pelis Online"
+          class="logo-header"
+        />Pelis Online</a
+      >
+      <p class="mb-0" id="saludo"></p>
+      <nav class="iconos-nav">
+        <a href="../index.html#popu-pelis">
+          <i class="fa-solid fa-film"></i>
+        </a>
+        <a href="../pages/favoritos.html">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+        <a href="../pages/pelis-animadas.html">
+          <i class="fa-solid fa-face-smile"></i>
+        </a>
+      </nav>
+    </header>
+<body>
+
+    <!--Contendedor donde se imprimen los favoritos-->
+     <div>
+      <div class="listado-pelis">
+        <img src="../img/pururu.png" alt="pochoclo" class="pika-icon">
+        <p class="tittle-listado">Mis Favoritos</p>
+      </div>
+      <div id="favoritos-container"></div>
+
+    </div>
+
+    
+    <footer class="footer-pelis">
+      <a href="../index.html"
+        ><img
+          src="../img/Logo-Pelis.png"
+          alt="Logo Pelis Online"
+          class="logo-footer"
+      /></a>
+      <p id="anio"></p>
+      <p>Todos los derechos reservados</p>
+    </footer>
+
+    <!-- JS BOOTSTRAPP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Libreria Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

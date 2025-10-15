@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Manejo del formulario
+// Manejo del formulario de login
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -27,7 +27,7 @@ loginForm.addEventListener("submit", (e) => {
   const usuario = document.getElementById("usuario").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  // Validación incorporando sweet alert
+  // Validación del login incorporando sweet alert
 if (usuario !== "user" || password !== "pass") {
   Swal.fire({
     icon: 'error',

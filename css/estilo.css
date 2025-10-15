@@ -208,7 +208,11 @@ button#cargarMas {
   margin-bottom: 0px;
 }
 
-#peliculas, #pokepelis {
+#peliculas,
+#pokepelis,
+#favoritos-container,
+#pelisAnimadas,
+#buscador {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
@@ -283,6 +287,17 @@ button#cargarMas {
   max-width: 4%;
 }
 
+.space {
+  margin-right: 10px;
+}
+
+.sin-favoritos {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
 /* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */
 .custom-img {
   max-height: 70vh;
@@ -291,6 +306,35 @@ button#cargarMas {
 
 .carousel-indicators [data-bs-target] {
   background-color: white !important;
+}
+
+/* BUSCADOR */
+.buscador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.buscador input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.buscador button {
+  padding: 10px 15px;
+  border: none;
+  background: #ff4757;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buscador button:hover {
+  background: #e84118;
 }
 
 /* FOOTER */

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelis Online | Pelis de Pokemon</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelis Online | Pelis Animadas</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilo.css"/>
+    <link rel="stylesheet" href="../css/estilo.css" />
 
     <!-- CSS BOOTSTRAP-->
     <link
@@ -14,10 +14,6 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <!-- JS -->
-    <script defer src="../js/pokepelis.js"></script>
-    <script defer src="../js/login.js"></script>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,34 +40,28 @@
       >
       <p class="mb-0" id="saludo"></p>
       <nav class="iconos-nav">
-        <a href="#">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
-        <a href="#popu-pelis">
+        <a href="../index.html#popu-pelis">
           <i class="fa-solid fa-film"></i>
         </a>
-        <a href="#">
+        <a href="../pages/favoritos.html">
           <i class="fa-solid fa-heart"></i>
         </a>
-        <a href="#l">
-          <i class="fa-solid fa-user"></i>
+        <a href="../pages/pelis-animadas.html">
+          <i class="fa-solid fa-face-smile"></i>
         </a>
       </nav>
     </header>
-<body>
 
-    <!--Contendedor donde se imprimen las pokepelis-->
-     <div>
+    <div>
       <div class="listado-pelis">
-        <img src="../img/pikachu.png" alt="pikachu icono" class="pika-icon">
-        <p class="tittle-listado">Poke Pelis</p>
+        <img src="../img/pikachu.png" alt="pikachu icono" class="pika-icon" />
+        <p class="tittle-listado">Pelis Animadas</p>
       </div>
-      <div id="pokepelis"></div>
 
-
+      <!-- contenedor donde se van a renderizar las películas animadas -->
+      <div id="pelisAnimadas"></div>
     </div>
 
-    
     <footer class="footer-pelis">
       <a href="../index.html"
         ><img
@@ -89,6 +79,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JS -->
+    <script defer src="../js/pelis-animadas.js"></script>
 
     <!--Libreria Sweet Alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

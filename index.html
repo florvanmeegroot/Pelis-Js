@@ -45,17 +45,14 @@
       >
       <p class="mb-0" id="saludo"></p>
       <nav class="iconos-nav">
-        <a href="#">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
         <a href="#popu-pelis">
           <i class="fa-solid fa-film"></i>
         </a>
-        <a href="#">
+        <a href="./pages/favoritos.html">
           <i class="fa-solid fa-heart"></i>
         </a>
-        <a href="#l">
-          <i class="fa-solid fa-user"></i>
+        <a href="./pages/pelis-animadas.html">
+          <i class="fa-solid fa-face-smile"></i>
         </a>
       </nav>
     </header>
@@ -143,11 +140,11 @@
               class="carousel-caption d-none d-md-flex flex-column justify-content-center align-items-start text-start h-100 ps-4"
             >
               <h2 class="titulo-h1">
-                ¿Sos fan de<br />
-                Pokemon?
+                La mágia de la <br />
+                animación
               </h2>
               <button class="btn-home">
-                <a href="./pages/pokepelis.html">Mira las PokePelis</a>
+                <a href="./pages/pelis-animadas.html">Pelis animadas</a>
               </button>
             </div>
           </div>
@@ -162,11 +159,11 @@
               class="carousel-caption d-none d-md-flex flex-column justify-content-center align-items-start text-start h-100 ps-4"
             >
               <h3 class="titulo-h1">
-                Busca tus pelis<br/>
+                Busca tus pelis<br />
                 favoritas
               </h3>
               <button class="btn-home">
-                <a href="./pages/buscador.html">Ir al buscador</a>
+                <a href="./pages/favoritos.html">Ir a favoritos</a>
               </button>
             </div>
           </div>
@@ -192,8 +189,14 @@
       </div>
     </main>
 
+    <!--Renderizado de las cards con peliculas populares-->
     <div>
       <div class="listado-pelis" id="popu-pelis">
+        <img
+          src="./img/pelis-populares.png"
+          alt="peliculas populares"
+          class="pika-icon space"
+        />
         <p class="tittle-listado">Películas Populares</p>
       </div>
       <div id="peliculas"></div>
