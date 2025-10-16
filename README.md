@@ -20,7 +20,8 @@ Tiene validaciones para solo aceptar dichas credenciales.
 - Uso de DOM y eventos.
 - Conexión con la api de The Movie_Database (TMDB) para obtener las peliculas populares a través de una función fetch
 - Conexión con una JSON local a través de fetch, que traer peliculas animadas, simulando una base de datos local.
-- Guardado en el localstorage, el logueo para permanecer logueado y no volver a colocar las credenciales del inicio, y para el guardado de las peliculas favoritas.
+- Guardado en el localstorage para el logueo para permanecer logueado y no volver a colocar las credenciales del inicio.
+- Guardado en el localstorage para el guardado de las peliculas favoritas.
 - Utilización de herramientas de terceros, utilizando un carrusel de Bootstrap. Los alerts y mensajes para el usuario son de Sweet Alert 2.
 
 ## 🔗 Enlace en vivo
