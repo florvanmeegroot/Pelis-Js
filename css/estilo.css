@@ -283,6 +283,18 @@ button#cargarMas {
   align-items: center;
 }
 
+p.categoria {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-weight: 400;
+  color: black;
+  background-color: #efefef;
+  width: fit-content;
+  margin: 10px;
+  font-size: 12px;
+}
+
 .pika-icon {
   max-width: 4%;
 }
@@ -296,6 +308,27 @@ button#cargarMas {
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
   color: white;
+}
+
+/* BOTONERA DE GENEROS DE PELIS */
+#botonera-generos {
+  margin-top: 20px;
+  text-align: center;
+  max-height: 80px;
+}
+
+.btn-genero {
+  background-color: transparent;
+  padding: 3px 10px;
+  border: 0px;
+  margin: 5px;
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+button.btn-genero.activo {
+  border-bottom: solid 3px #FF4E4E;
 }
 
 /* MODIFICACIONES DEL CARRUSEL DE BOOTSTRAP */
@@ -412,6 +445,10 @@ p {
   /* FOOTER */
   .logo-footer {
     max-width: 15%;
+  }
+  /* BOTONERA DE GENEROS DE PELIS */
+  #botonera-generos {
+    max-height: none;
   }
 }
 

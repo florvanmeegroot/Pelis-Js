@@ -119,6 +119,18 @@
       "title": "El planeta del tesoro",
       "overview": "Jim Hawkins se embarca en una aventura espacial en busca de un mapa a un planeta mítico.",
       "poster_path": "https://es.web.img2.acsta.net/pictures/14/04/14/12/53/368430.jpg"
+    },
+    {
+      "id": 585,
+      "title": "Monsters, Inc.",
+      "overview": "Sulley y Mike Wazowski descubren que los niños humanos no son tóxicos como creían.",
+      "poster_path": "https://lumiere-a.akamaihd.net/v1/images/p_monstersinc_19751_55afa07a.jpeg?region=0%2C0%2C540%2C810"
+    },
+    {
+      "id": 14160,
+      "title": "Up",
+      "overview": "Señor Carl Fredricksen, un viudo de 78 años, cumple su sueño de viajar a Sudamérica atando miles de globos a su casa, acompañado inesperadamente por un niño explorador llamado Russell.",
+      "poster_path": "https://es.web.img3.acsta.net/r_1920_1080/medias/nmedia/18/68/08/67/20473292.jpg"
     }
   ]
 }
