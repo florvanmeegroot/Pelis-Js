@@ -13,7 +13,6 @@ El simulador cuenta con:
 Para iniciar sesión es importante hacerlo con:
 - usuario: user
 - contraseña: pass
-Tiene validaciones para solo aceptar dichas credenciales.
 
 ## ✨ Características
 
