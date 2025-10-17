@@ -17,7 +17,7 @@ function mostrarFavoritos(peliculas) {
     const div = document.createElement("div");
     div.classList.add("pelicula");
 
-    // ✅ Comprobar si la URL ya es completa
+    // Comprobar si la URL ya es completa
     const imagenSrc = pelicula.poster_path.startsWith("http")
       ? pelicula.poster_path
       : `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`;
